@@ -9,4 +9,4 @@ ENV FAKE_LOCAL_PORT=8888
 
 RUN apk add --no-cache openssh
 
-ENTRYPOINT [ "/usr/bin/ssh", "-R", "${FAKE_LOCAL_PORT}:${SINGLETON_PORT}", "-o", "ExitOnForwardFailure=yes", "-o", "LogLevel=ERROR", "-o", "UserKnownHostsFile=/dev/null", "-o", "StrictHostKeyChecking=no" ]
+ENTRYPOINT [ "/usr/bin/ssh", "-R", "${FAKE_LOCAL_PORT}:${SINGLETON_PORT}", "-o", "ExitOnForwardFailure=yes", "-o", "LogLevel=ERROR", "-o", "UserKnownHostsFile=/dev/null", "-o", "StrictHostKeyChecking=no", "-o", "TCPKeepAlive=yes" ]
