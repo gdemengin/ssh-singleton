@@ -1,1 +1,1 @@
-jenkins ssh server (based on jekins agent) to test ssh-singleton
+jenkins ssh server (based on jenkins agent) to test ssh-singleton
